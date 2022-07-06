@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background: #202020;
+  width: 90%;
+  max-width: 500px;
+  padding: 7em 2em;
+  border-radius: 12px;
+}
+
+.input-div,
+button {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.input-div:not(:last-child) {
+  margin-bottom: 4em;
+}
+
+.input-div .bg {
+  padding: 1em;
+  width: 100%;
+}
+
+.input-div input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  outline: none;
+  border: none;
+  background: #4a4a4a;
+  color: #fff;
+  padding: 0 1.3em;
+  width: 100%;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  height: 2px;
+  transition: all 0.5s;
+}
+
+.input-div input::placeholder {
+  opacity: 0;
+}
+
+.input-div label {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  color: #fff;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+
+.input-div.active input {
+  height: 100%;
+}
+
+.input-div.active input::placeholder {
+  opacity: 0.6;
+}
+
+.input-div.active label {
+  top: unset;
+  transform: translateY(0);
+  bottom: calc(100% + 4px);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 1em;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #e0e0e0;
+}
